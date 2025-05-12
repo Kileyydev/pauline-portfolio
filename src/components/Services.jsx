@@ -1,4 +1,11 @@
-import { Box, Container, Grid, Paper, Typography, SvgIcon } from '@mui/material';
+import {
+  Box,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  SvgIcon,
+} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CodeIcon from '@mui/icons-material/Code';
 import BrushIcon from '@mui/icons-material/Brush';
@@ -49,17 +56,28 @@ const ServiceCard = ({ icon, title, description }) => (
       borderColor: 'grey.200',
       bgcolor: 'background.paper',
       width: '100%',
-      maxWidth: 300, // Constrain card width
+      maxWidth: 300,
+      mx: 'auto',
     }}
   >
     <SvgIcon
       component={icon}
       sx={{ fontSize: 40, color: 'primary.main', mb: 1.5 }}
     />
-    <Typography variant="h6" component="h3" color="text.primary" gutterBottom sx={{ fontSize: '1.1rem' }}>
+    <Typography
+      variant="h6"
+      component="h3"
+      color="text.primary"
+      gutterBottom
+      sx={{ fontSize: '1.1rem' }}
+    >
       {title}
     </Typography>
-    <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.85rem' }}>
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      sx={{ fontSize: '0.85rem' }}
+    >
       {description}
     </Typography>
   </Paper>
@@ -89,38 +107,43 @@ const AchievementCard = ({ metric, description }) => (
 // Combined Services and Achievements component
 const ServicesAndAchievements = () => {
   const services = [
-  {
-    icon: CodeIcon,
-    title: 'Financial Advisory',
-    description: 'Providing strategic financial guidance to ensure sustainable business growth.',
-  },
-  {
-    icon: BrushIcon,
-    title: 'Audit & Assurance',
-    description: 'Delivering accurate, compliant audits that build stakeholder trust.',
-  },
-  {
-    icon: BarChartIcon,
-    title: 'Taxation Services',
-    description: 'Offering expert tax planning and compliance strategies for organizations.',
-  },
-  {
-    icon: DesignServicesIcon,
-    title: 'Corporate Governance',
-    description: 'Strengthening board effectiveness and ethical leadership practices.',
-  },
-  {
-    icon: EditIcon,
-    title: 'Capacity Building',
-    description: 'Equipping teams with skills in finance, leadership, and strategic planning.',
-  },
-  {
-    icon: SearchIcon,
-    title: 'Policy Development',
-    description: 'Designing impactful policies that align with organizational goals.',
-  },
-];
-
+    {
+      icon: CodeIcon,
+      title: 'Financial Advisory',
+      description:
+        'Providing strategic financial guidance to ensure sustainable business growth.',
+    },
+    {
+      icon: BrushIcon,
+      title: 'Audit & Assurance',
+      description:
+        'Delivering accurate, compliant audits that build stakeholder trust.',
+    },
+    {
+      icon: BarChartIcon,
+      title: 'Taxation Services',
+      description:
+        'Offering expert tax planning and compliance strategies for organizations.',
+    },
+    {
+      icon: DesignServicesIcon,
+      title: 'Corporate Governance',
+      description:
+        'Strengthening board effectiveness and ethical leadership practices.',
+    },
+    {
+      icon: EditIcon,
+      title: 'Capacity Building',
+      description:
+        'Equipping teams with skills in finance, leadership, and strategic planning.',
+    },
+    {
+      icon: SearchIcon,
+      title: 'Policy Development',
+      description:
+        'Designing impactful policies that align with organizational goals.',
+    },
+  ];
 
   const achievements = [
     {
@@ -152,41 +175,18 @@ const ServicesAndAchievements = () => {
             align="center"
             color="text.primary"
             gutterBottom
-            sx={{ mb: 4, fontSize: { xs: '1.8rem', md: '2.5rem' }, fontWeight: 'bold',}}
+            sx={{
+              mb: 4,
+              fontSize: { xs: '1.8rem', md: '2.5rem' },
+              fontWeight: 'bold',
+            }}
           >
             Services
           </Typography>
-          {/* First Row */}
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              flexWrap: 'nowrap', // Force single row
-              justifyContent: 'center',
-              mb: 2, // Space between rows
-            }}
-          >
-            {services.slice(0, 3).map((service, index) => (
-              <Grid item xs={4} key={index}>
-                <ServiceCard
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                />
-              </Grid>
-            ))}
-          </Grid>
-          {/* Second Row */}
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              flexWrap: 'nowrap', // Force single row
-              justifyContent: 'center',
-            }}
-          >
-            {services.slice(3, 6).map((service, index) => (
-              <Grid item xs={4} key={index + 3}>
+
+          <Grid container spacing={4} justifyContent="center">
+            {services.map((service, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
                 <ServiceCard
                   icon={service.icon}
                   title={service.title}
@@ -215,16 +215,9 @@ const ServicesAndAchievements = () => {
           >
             Achievements
           </Typography>
-          <Grid
-            container
-            spacing={2}
-            sx={{
-              flexWrap: 'nowrap', // Force single row
-              justifyContent: 'center',
-            }}
-          >
+          <Grid container spacing={4} justifyContent="center">
             {achievements.map((achievement, index) => (
-              <Grid item xs={3} key={index}>
+              <Grid item xs={12} sm={6} md={3} key={index}>
                 <AchievementCard
                   metric={achievement.metric}
                   description={achievement.description}

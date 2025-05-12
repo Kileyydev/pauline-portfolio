@@ -26,6 +26,7 @@ const HeroSection = () => {
         position: 'relative',
         backgroundColor: '#f4f4f4',
         overflow: 'hidden',
+        pt: isMobile ? 8 : 0, // Add top padding for small screens to avoid overlap with navbar
       }}
     >
       {/* Left - Text Section */}
@@ -42,15 +43,26 @@ const HeroSection = () => {
         }}
       >
         <Box sx={{ maxWidth: 600, textAlign: isMobile ? 'center' : 'left' }}>
-          <Typography
-            variant={isMobile ? 'h4' : 'h3'}
-            sx={{ fontWeight: 700, fontFamily: 'Poppins, sans-serif', color: '#000' }}
-          >
-            Pauline M. Mukulu
-          </Typography>
+          {!isMobile && ( // Hide name on mobile
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 700,
+                fontFamily: 'Poppins, sans-serif',
+                color: '#000',
+              }}
+            >
+              Pauline M. Mukulu
+            </Typography>
+          )}
           <Typography
             variant="h6"
-            sx={{ mt: 1, color: '#d4a017', fontWeight: 500, fontFamily: 'Poppins, sans-serif' }}
+            sx={{
+              mt: isMobile ? 0 : 1,
+              color: '#d4a017',
+              fontWeight: 500,
+              fontFamily: 'Poppins, sans-serif',
+            }}
           >
             MBA, CPA-K — Finance & Strategy Leader
           </Typography>
