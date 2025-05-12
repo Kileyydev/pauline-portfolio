@@ -152,9 +152,9 @@ const ServicesAndAchievements = () => {
             align="center"
             color="text.primary"
             gutterBottom
-            sx={{ mb: 4, fontSize: { xs: '1.8rem', md: '2.5rem' } }}
+            sx={{ mb: 4, fontSize: { xs: '1.8rem', md: '2.5rem' }, fontWeight: 'bold',}}
           >
-            Our Services
+            Services
           </Typography>
           {/* First Row */}
           <Grid
@@ -211,7 +211,6 @@ const ServicesAndAchievements = () => {
               mb: 4,
               fontSize: { xs: '1.8rem', md: '2.5rem' },
               fontWeight: 'bold',
-              textTransform: 'uppercase',
             }}
           >
             Achievements

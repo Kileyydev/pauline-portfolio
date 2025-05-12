@@ -13,24 +13,24 @@ import { CheckCircle } from '@mui/icons-material';
 
 const milestones = [
   {
-    year: '2024',
+    year: '2022',
     achievement: 'Appointed Deputy Chief Internal Auditor',
   },
   {
-    year: '2021',
-    achievement: 'Promoted to Strategy & Planning Lead',
-  },
-  {
-    year: '2018',
-    achievement: 'Joined as Corporate Planning and Strategy Specialist',
-  },
-  {
     year: '2016',
-    achievement: 'Senior Economist – Ministry of Energy, Kenya',
+    achievement: 'Promoted to Senior Internal Auditor',
   },
   {
-    year: '2013',
-    achievement: 'Earned MBA – Strategic Management, Kenyatta University',
+    year: '2014',
+    achievement: 'Promoted to a Data Accountant',
+  },
+  {
+    year: '2006',
+    achievement: 'Accountant',
+  },
+  {
+    year: '2003',
+    achievement: 'Administrator',
   },
   {
     year: '2011',
@@ -132,7 +132,7 @@ const AboutSection = () => {
             fontFamily: 'Poppins, sans-serif',
           }}
         >
-          Her career spans impactful roles at the Ministry of Energy and other organizations, where she has led strategic reforms, planning frameworks, and public investments. Pauline is passionate about building sustainable systems, empowering women in leadership, and aligning institutions with long-term national goals.
+          Her career spans impactful roles at Afya Sacco, where she has led strategic reforms, planning frameworks, and public investments. Pauline is passionate about building sustainable systems, empowering women in leadership, and aligning institutions with long-term national goals.
         </Typography>
       </Box>
     </Box>

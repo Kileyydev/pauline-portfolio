@@ -74,7 +74,7 @@ const Testimonials = () => {
             
               }}
             >
-              What Our Clients Say
+             Testimonials
             </Typography>
             <Box
               sx={{
